@@ -36,17 +36,27 @@ Shared types and utilities for the Earthbound project (Homepage and API).
 ## Usage
 
 ### Deno
+
 ```typescript
 import { UserActivityState } from "jsr:@jmsutorus/earthbound-shared";
 ```
 
 ### Node.js / Next.js
+
 First, add the package:
+
 ```bash
 npx jsr add @jmsutorus/earthbound-shared
 ```
 
 Then import:
+
 ```typescript
 import { UserActivityState } from "@jmsutorus/earthbound-shared";
+```
+
+## Deploy to JSR
+
+```bash
+npx jsr publish
 ```
