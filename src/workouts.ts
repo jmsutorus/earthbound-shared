@@ -65,3 +65,41 @@ export interface WorkoutGoal {
   created_at: string;
   updated_at: string;
 }
+
+export interface WorkoutPlan {
+  id: number;
+  user_id: string;
+  name: string;
+  description?: string | null;
+  exercises?: string | null; // JSON string
+  duration: number;
+  intensity: "low" | "medium" | "high";
+  type: "cardio" | "strength" | "flexibility" | "sports" | "other";
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ScheduledWorkout {
+  id: number;
+  user_id: string;
+  workout_plan_id?: number | null;
+  calendar_event_id?: string | null;
+  scheduled_date: string; // YYYY-MM-DD
+  scheduled_time: string; // HH:MM
+  duration: number;
+  reminder_minutes: number;
+  completed: boolean;
+  completed_at?: string | null;
+  notes?: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface WorkoutGoal {
+  id: number;
+  userId: string;
+  goal: string;
+  met: boolean;
+  created_at: string;
+  updated_at: string;
+}

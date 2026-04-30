@@ -11,3 +11,19 @@ export interface TaskTemplate {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface CreateTaskTemplateInput {
+  name: string;
+  title: string;
+  priority: TaskPriority;
+  category?: string;
+  dueDate?: string;
+}
+
+export interface UpdateTaskTemplateInput {
+  name?: string;
+  title?: string;
+  priority?: TaskPriority;
+  category?: string;
+  dueDate?: string;
+}

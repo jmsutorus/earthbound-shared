@@ -89,3 +89,23 @@ export interface ParkTrail {
   created_at: string;
   updated_at: string;
 }
+
+export interface DBPark {
+  id: number;
+  userId: string;
+  slug: string;
+  title: string;
+  category: ParkCategoryValue;
+  state: string | null;
+  poster: string | null;
+  description: string | null;
+  visited: string | null; // YYYY-MM-DD
+  tags: string | null; // JSON string
+  rating: number | null;
+  featured: number; // SQLite boolean (0 or 1)
+  published: number; // SQLite boolean (0 or 1)
+  content: string;
+  quote: string | null;
+  created_at: string;
+  updated_at: string;
+}

@@ -57,3 +57,45 @@ export interface GoalWithProgress extends Goal {
   milestoneCount: number;
   milestonesCompleted: number;
 }
+
+
+// Raw database row types (before parsing)
+interface GoalRow {
+  id: number;
+  userId: string;
+  slug: string;
+  title: string;
+  description: string | null;
+  content: string | null;
+  status: GoalStatus;
+  target_date: string | null;
+  completed_date: string | null;
+  tags: string | null;
+  priority: GoalPriority;
+  created_at: string;
+  updated_at: string;
+}
+
+interface MilestoneRow {
+  id: number;
+  goalId: number;
+  title: string;
+  description: string | null;
+  target_date: string | null;
+  completed: number;
+  completed_date: string | null;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+interface ChecklistRow {
+  id: number;
+  goalId: number | null;
+  milestoneId: number | null;
+  text: string;
+  completed: number;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}

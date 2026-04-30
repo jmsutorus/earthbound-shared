@@ -40,3 +40,12 @@ export interface JournalLink {
   linked_slug: string | null;
   created_at: string;
 }
+
+export interface DBJournalLink {
+  id: number;
+  journal_id: number;
+  linked_type: string;
+  linked_id: number;
+  linked_slug: string | null;
+  created_at: string;
+}
