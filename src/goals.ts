@@ -60,7 +60,7 @@ export interface GoalWithProgress extends Goal {
 
 
 // Raw database row types (before parsing)
-interface GoalRow {
+export interface GoalRow {
   id: number;
   userId: string;
   slug: string;
@@ -76,7 +76,7 @@ interface GoalRow {
   updated_at: string;
 }
 
-interface MilestoneRow {
+export interface MilestoneRow {
   id: number;
   goalId: number;
   title: string;
@@ -89,7 +89,7 @@ interface MilestoneRow {
   updated_at: string;
 }
 
-interface ChecklistRow {
+export interface ChecklistRow {
   id: number;
   goalId: number | null;
   milestoneId: number | null;

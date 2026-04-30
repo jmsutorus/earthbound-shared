@@ -83,7 +83,7 @@ export interface CreateDrinkLogInput {
 
 // ==================== DB Row Types ====================
 
-interface DBDrink {
+export interface DBDrink {
   id: number;
   userId: string;
   slug: string;
@@ -104,7 +104,7 @@ interface DBDrink {
   updated_at: string;
 }
 
-interface DBDrinkLog {
+export interface DBDrinkLog {
   id: number;
   userId: string;
   drinkId: number;

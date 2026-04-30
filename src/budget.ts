@@ -62,7 +62,7 @@ export interface UpdateFixedCostInput {
 
 // ==================== DB Row Types ====================
 
-interface DBBudgetIncome {
+export interface DBBudgetIncome {
   id: number;
   userId: string;
   amount: number;
@@ -74,7 +74,7 @@ interface DBBudgetIncome {
   updated_at: string;
 }
 
-interface DBBudgetFixedCost {
+export interface DBBudgetFixedCost {
   id: number;
   userId: string;
   name: string;

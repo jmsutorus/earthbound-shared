@@ -70,7 +70,7 @@ export interface CreatePaymentInput {
 
 // ==================== DB Row Types ====================
 
-interface DBDebt {
+export interface DBDebt {
   id: number;
   userId: string;
   name: string;
@@ -87,7 +87,7 @@ interface DBDebt {
   updated_at: string;
 }
 
-interface DBDebtPayment {
+export interface DBDebtPayment {
   id: number;
   debtId: number;
   userId: string;
