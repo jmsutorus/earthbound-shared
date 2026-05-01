@@ -18,6 +18,8 @@ export interface Drink {
   body_feel: string | null;
   serving_temp: string | null;
   pairings: string | null;
+  featured: boolean;
+  published: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -54,6 +56,8 @@ export interface CreateDrinkInput {
   body_feel?: string;
   serving_temp?: string;
   pairings?: string;
+  featured?: boolean;
+  published?: boolean;
 }
 
 export interface UpdateDrinkInput {
@@ -71,6 +75,8 @@ export interface UpdateDrinkInput {
   body_feel?: string;
   serving_temp?: string;
   pairings?: string;
+  featured?: boolean;
+  published?: boolean;
 }
 
 export interface CreateDrinkLogInput {
@@ -100,6 +106,8 @@ export interface DBDrink {
   body_feel: string | null;
   serving_temp: string | null;
   pairings: string | null;
+  featured: number;
+  published: number;
   created_at: string;
   updated_at: string;
 }

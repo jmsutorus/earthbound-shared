@@ -22,6 +22,8 @@ export interface WorkoutActivity {
   completed: boolean;
   completed_at?: string | null;
   completion_notes?: string | null;
+  featured: boolean;
+  published: boolean;
   created_at: string;
   updated_at: string;
   pace?: number | null;
@@ -38,6 +40,8 @@ export interface CreateWorkoutActivity {
   notes?: string;
   completed?: boolean;
   completed_at?: string | null;
+  featured?: boolean;
+  published?: boolean;
 }
 
 export interface WorkoutActivityStats {

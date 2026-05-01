@@ -27,6 +27,8 @@ export interface Event {
   notifications: EventNotification[];
   notification_setting: string | null;
   content: string | null;
+  featured: boolean;
+  published: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -45,6 +47,8 @@ export interface CreateEventInput {
   notifications?: EventNotification[];
   notification_setting?: string;
   content?: string;
+  featured?: boolean;
+  published?: boolean;
 }
 
 export interface EventPhoto {

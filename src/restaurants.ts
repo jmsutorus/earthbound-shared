@@ -17,6 +17,8 @@ export interface Restaurant {
   notes: string | null;
   favorite: boolean;
   status: RestaurantStatus;
+  featured: boolean;
+  published: boolean;
   created_at: string;
   updated_at: string;
 }

@@ -13,6 +13,8 @@ export interface Goal {
   completed_date: string | null;
   tags: string[];
   priority: GoalPriority;
+  featured: boolean;
+  published: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -72,6 +74,8 @@ export interface GoalRow {
   completed_date: string | null;
   tags: string | null;
   priority: GoalPriority;
+  featured: number;
+  published: number;
   created_at: string;
   updated_at: string;
 }
