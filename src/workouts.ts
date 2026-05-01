@@ -1,10 +1,11 @@
 export interface Exercise {
-  description: string;
-  reps?: number;
+  name: string;
   sets?: number;
-  duration?: number;
-  pace?: string;
-  weight?: number;
+  reps?: string;
+  weight?: string;
+  duration?: string;
+  distance?: string;
+  notes?: string;
 }
 
 export interface WorkoutActivity {
@@ -13,17 +14,17 @@ export interface WorkoutActivity {
   date: string; // YYYY-MM-DD
   time: string; // HH:MM
   length: number; // Total duration in minutes
-  distance?: number; // Distance in miles
+  distance?: number | null; // Distance in miles
   difficulty: "easy" | "moderate" | "hard" | "very hard";
   type: "run" | "cardio" | "strength" | "flexibility" | "sports" | "mixed" | "other" | "swim" | "yoga" | "pilates";
-  exercises: string; // JSON string or parsed Exercise[]
+  exercises: Exercise[];
   notes?: string | null;
   completed: boolean;
   completed_at?: string | null;
   completion_notes?: string | null;
   created_at: string;
   updated_at: string;
-  pace?: number;
+  pace?: number | null;
 }
 
 export interface CreateWorkoutActivity {
@@ -91,15 +92,6 @@ export interface ScheduledWorkout {
   completed: boolean;
   completed_at?: string | null;
   notes?: string | null;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface WorkoutGoal {
-  id: number;
-  userId: string;
-  goal: string;
-  met: boolean;
   created_at: string;
   updated_at: string;
 }
