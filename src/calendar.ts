@@ -149,7 +149,11 @@ export interface CalendarDaySummary {
   };
   eventCount: number;
   eventFirstTitle: string | null;
+  eventFirstCategory: string | null;
   eventFirstImage: string | null;
+  eventFirstNonHolidayTitle: string | null;
+  eventFirstNonHolidayCategory: string | null;
+  eventNonHolidayCount: number;
   hasMovie: boolean;
   hasTV: boolean;
   hasBook: boolean;
