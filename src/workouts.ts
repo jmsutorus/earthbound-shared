@@ -1,11 +1,15 @@
 export interface Exercise {
-  name: string;
+  name?: string;
+  description?: string;
   sets?: number;
-  reps?: string;
-  weight?: string;
-  duration?: string;
-  distance?: string;
+  reps?: number;
+  weight?: number;
+  duration?: number;
+  distance?: number;
+  muscle?: string;
   notes?: string;
+  time?: string;
+  elevation?: number;
 }
 
 export interface WorkoutActivity {
