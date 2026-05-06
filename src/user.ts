@@ -28,7 +28,7 @@ export interface User {
   showProfile: boolean;
   haptic: boolean;
   public_slug: string | null;
-  ingestionKey: string | null;
+
   createdAt: number;
   updatedAt: number;
 }
@@ -43,7 +43,7 @@ export interface UserRow {
   showProfile: number;
   haptic: number;
   public_slug: string | null;
-  ingestionKey: string | null;
+
   createdAt: number;
   updatedAt: number;
 }
