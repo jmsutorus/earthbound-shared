@@ -7,6 +7,7 @@ export interface MoodEntry {
   sick: boolean | null;
   wake_up_time: string | null;
   bed_time: string | null;
+  sleep_score: number | null;
   created_at: string;
   updated_at: string;
 }
