@@ -33,6 +33,7 @@ export interface User {
   height: number | null;
   weight: number | null;
   unit_system: 'metric' | 'imperial';
+  onboarded: boolean;
 
   createdAt: number;
   updatedAt: number;
@@ -53,6 +54,7 @@ export interface UserRow {
   height: number | null;
   weight: number | null;
   unit_system: string;
+  onboarded: number;
 
   createdAt: number;
   updatedAt: number;
