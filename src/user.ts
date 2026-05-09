@@ -28,6 +28,11 @@ export interface User {
   showProfile: boolean;
   haptic: boolean;
   public_slug: string | null;
+  birthday: string | null;
+  age: number | null;
+  height: number | null;
+  weight: number | null;
+  unit_system: 'metric' | 'imperial';
 
   createdAt: number;
   updatedAt: number;
@@ -43,6 +48,11 @@ export interface UserRow {
   showProfile: number;
   haptic: number;
   public_slug: string | null;
+  birthday: string | null;
+  age: number | null;
+  height: number | null;
+  weight: number | null;
+  unit_system: string;
 
   createdAt: number;
   updatedAt: number;
