@@ -34,6 +34,7 @@ export interface User {
   weight: number | null;
   unit_system: 'metric' | 'imperial';
   onboarded: boolean;
+  nav_preferences: string[] | null;
 
   createdAt: number;
   updatedAt: number;
@@ -55,6 +56,7 @@ export interface UserRow {
   weight: number | null;
   unit_system: string;
   onboarded: number;
+  nav_preferences: string | null;
 
   createdAt: number;
   updatedAt: number;
