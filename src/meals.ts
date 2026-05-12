@@ -38,12 +38,12 @@ export interface Meal {
     userId: string;
     name: string;
     description: string | null;
-    steps: string | null;
+    steps: string[];
     servings: number;
     prep_time: number | null;
     cook_time: number | null;
     image_url: string | null;
-    tags: string | null;
+    tags: string[];
     rating: number | null;
     created_at: string;
     updated_at: string;
@@ -113,14 +113,15 @@ export interface GroceryListByCategory {
 export type Difficulty = "Beginner" | "Intermediate" | "Advanced";
 
 // Daily Meals Types
-export type MealType = "breakfast" | "lunch" | "dinner";
+export type MealType = "breakfast" | "lunch" | "dinner" | "snack";
 
-export const MEAL_TYPES: MealType[] = ["breakfast", "lunch", "dinner"];
+export const MEAL_TYPES: MealType[] = ["breakfast", "lunch", "dinner", "snack"];
 
 export const MEAL_TYPE_DISPLAY_NAMES: Record<MealType, string> = {
     breakfast: "Breakfast",
     lunch: "Lunch",
     dinner: "Dinner",
+    snack: "Snack",
 };
 
 export interface DailyMeal {

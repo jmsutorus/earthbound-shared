@@ -36,17 +36,17 @@ export interface Event {
 export interface CreateEventInput {
   slug: string;
   title: string;
-  description?: string;
-  location?: string;
+  description?: string | null;
+  location?: string | null;
   date: string;
-  start_time?: string;
-  end_time?: string;
+  start_time?: string | null;
+  end_time?: string | null;
   all_day?: boolean;
-  end_date?: string;
-  category?: string;
+  end_date?: string | null;
+  category?: string | null;
   notifications?: EventNotification[];
-  notification_setting?: string;
-  content?: string;
+  notification_setting?: string | null;
+  content?: string | null;
   featured?: boolean;
   published?: boolean;
 }
