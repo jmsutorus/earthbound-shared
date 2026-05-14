@@ -45,6 +45,11 @@ export interface Meal {
     image_url: string | null;
     tags: string[];
     rating: number | null;
+    drink_pairing: string | null;
+    chef_secret: string | null;
+    leftover_idea: string | null;
+    flavor_profile: string | null;
+    nutrition_insight: string | null;
     created_at: string;
     updated_at: string;
 }
@@ -70,6 +75,11 @@ export interface MealInput {
     image_url?: string;
     tags?: string[];
     rating?: number;
+    drink_pairing?: string;
+    chef_secret?: string;
+    leftover_idea?: string;
+    flavor_profile?: string;
+    nutrition_insight?: string;
 }
 
 export interface IngredientInput {

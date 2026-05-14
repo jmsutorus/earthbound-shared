@@ -38,6 +38,7 @@ export interface User {
 
   createdAt: number;
   updatedAt: number;
+  role?: "user" | "admin" | "pro";
 }
 
 export interface UserRow {
