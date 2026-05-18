@@ -1,6 +1,8 @@
 // Shared types for meals and grocery features
 // This file contains only types and constants that can be used in both client and server components
 
+import type { Restaurant } from "./restaurants.ts";
+
 export type IngredientCategory =
     | "produce"
     | "dairy"
@@ -139,17 +141,20 @@ export interface DailyMeal {
     userId: string;
     date: string; // YYYY-MM-DD format
     meal_type: MealType;
-    mealId: number;
+    mealId: number | null;
+    restaurantSlug: string | null;
     created_at: string;
     updated_at: string;
 }
 
 export interface DailyMealWithRecipe extends DailyMeal {
-    meal: Meal;
+    meal: Meal | null;
+    restaurant: Restaurant | null;
 }
 
 export interface DailyMealInput {
     date: string;
     meal_type: MealType;
-    mealId: number;
+    mealId?: number | null;
+    restaurantSlug?: string | null;
 }
