@@ -4,6 +4,7 @@ import type { Task } from "./tasks.ts";
 import type { Habit } from "./habits.ts";
 import type { Vacation } from "./vacations.ts";
 import type { JournalContent } from "./journals.ts";
+import type { CreationContent } from "./creators.ts";
 
 /**
  * Discriminated union of all structured data payloads the chat API can emit.
@@ -20,6 +21,7 @@ export type ChatDataPayload =
   | { dataType: "tasks"; payload: Task[]; ids?: (number | string)[]; createdId?: number | string }
   | { dataType: "habits"; payload: Habit[]; ids?: (number | string)[]; createdId?: number | string }
   | { dataType: "vacations"; payload: Vacation[]; ids?: (number | string)[]; createdId?: number | string }
-  | { dataType: "journals"; payload: JournalContent[]; ids?: (number | string)[]; createdId?: number | string };
+  | { dataType: "journals"; payload: JournalContent[]; ids?: (number | string)[]; createdId?: number | string }
+  | { dataType: "creations"; payload: CreationContent[]; ids?: (number | string)[]; createdId?: number | string };
 
 export type ChatDataType = ChatDataPayload["dataType"];
