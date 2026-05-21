@@ -33,6 +33,20 @@ export interface SportsEntity {
   favorite: boolean;
   featured: boolean;
   published: boolean;
+  notify_upcoming: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface SportsFixture {
+  id: number;
+  userId: string;
+  entity_id: number;
+  match_date: string;
+  match_time: string;
+  opponent: string;
+  competition: string | null;
+  notified: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -43,6 +57,7 @@ export interface SportsEntityWithStats extends SportsEntity {
   draws: number;
   totalResults: number;
   lastResultDate: string | null;
+  recentForm: SportsResultOutcome[];
 }
 
 export interface SportsResult {
