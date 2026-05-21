@@ -9,6 +9,7 @@ export interface HomeEntry {
   category: string;
   location: string | null;
   notes: string | null;
+  image_url: string | null;
   has_schedule: boolean;
   schedule_type: HomeScheduleType | null;
   interval_days: number | null;
@@ -47,6 +48,7 @@ export interface UpdateHomeEntryInput {
   category?: string;
   location?: string | null;
   notes?: string | null;
+  image_url?: string | null;
   has_schedule?: boolean;
   schedule_type?: HomeScheduleType | null;
   interval_days?: number | null;
