@@ -93,3 +93,41 @@ export interface MediaTimelineData {
   stats: MediaTimelineStats;
   period: TimelinePeriod;
 }
+
+export interface MediaRankingType {
+  id: number;
+  mediaId: number;
+  name: string;
+  description: string | null;
+  created_at: string;
+}
+
+export interface MediaRankingTypeInput {
+  name: string;
+  description?: string;
+}
+
+export interface MediaRankingHistory {
+  id: number;
+  typeId: number;
+  season_tag: string | null;
+  tier: string | null;
+  numeric_value: number | null;
+  date_achieved: string;
+  notes: string | null;
+  created_at: string;
+}
+
+export interface MediaRankingHistoryInput {
+  season_tag?: string;
+  tier?: string;
+  numeric_value?: number;
+  date_achieved: string;
+  notes?: string;
+}
+
+export interface MediaRankingsResponse {
+  types: (MediaRankingType & {
+    latestHistory: MediaRankingHistory | null;
+  })[];
+}
