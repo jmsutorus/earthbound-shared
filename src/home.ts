@@ -1,4 +1,5 @@
 export type HomeScheduleType = 'interval' | 'specific_date';
+export type HomeNotificationTiming = 'week_before' | 'day_before' | 'day_of';
 
 export interface HomeEntry {
   id: number;
@@ -11,8 +12,10 @@ export interface HomeEntry {
   has_schedule: boolean;
   schedule_type: HomeScheduleType | null;
   interval_days: number | null;
-  next_due: string | null;       // YYYY-MM-DD
-  last_completed: string | null; // YYYY-MM-DD
+  next_due: string | null;             // YYYY-MM-DD
+  last_completed: string | null;       // YYYY-MM-DD
+  notification_enabled: boolean;
+  notification_timing: HomeNotificationTiming | null;
   created_at: string;
   updated_at: string;
 }
@@ -35,6 +38,8 @@ export interface CreateHomeEntryInput {
   schedule_type?: HomeScheduleType | null;
   interval_days?: number | null;
   next_due?: string | null;
+  notification_enabled?: boolean;
+  notification_timing?: HomeNotificationTiming | null;
 }
 
 export interface UpdateHomeEntryInput {
@@ -46,4 +51,6 @@ export interface UpdateHomeEntryInput {
   schedule_type?: HomeScheduleType | null;
   interval_days?: number | null;
   next_due?: string | null;
+  notification_enabled?: boolean;
+  notification_timing?: HomeNotificationTiming | null;
 }
