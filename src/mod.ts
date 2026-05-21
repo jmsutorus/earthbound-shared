@@ -23,6 +23,7 @@ export * from "./personal-records.ts";
 export * from "./quick-links.ts";
 export * from "./relationship.ts";
 export * from "./restaurants.ts";
+export * from "./sports.ts";
 export * from "./savings.ts";
 export * from "./subscriptions.ts";
 export * from "./task-templates.ts";
