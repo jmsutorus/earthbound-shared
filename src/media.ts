@@ -20,8 +20,20 @@ export interface MediaContent {
   time_spent: number;
   content?: string;
   progress: number;
+  achievement_percentage: number | null; // Games only: 0-100, null = not tracking
   created_at: string;
   updated_at: string;
+}
+
+export interface MediaPerson {
+  id: number;
+  mediaId: number;
+  personId: number;
+  name: string;
+  photo: string | null;
+  relationship: 'family' | 'friends' | 'work' | 'other';
+  relationshipTypeName?: string | null;
+  created_at: string;
 }
 
 export interface MediaContentInput {
@@ -44,6 +56,7 @@ export interface MediaContentInput {
   timeSpent?: number;
   content: string;
   progress?: number;
+  achievementPercentage?: number | null; // Games only: 0-100, null = not tracking
 }
 
 export interface PaginatedMediaResult {
