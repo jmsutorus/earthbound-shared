@@ -52,6 +52,25 @@ export interface VacationInput {
   content?: string;
 }
 
+export interface DayActivity {
+  id: number;
+  vacationId: number;
+  itinerary_day_id: number;
+  title: string;
+  notes: string | null;
+  photo: string | null;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface DayActivityInput {
+  title: string;
+  notes?: string;
+  photo?: string;
+  order_index?: number;
+}
+
 export interface ItineraryDay {
   id: number;
   vacationId: number;
@@ -67,6 +86,7 @@ export interface ItineraryDay {
   notification_setting: string | null;
   created_at: string;
   updated_at: string;
+  day_activities?: DayActivity[];
 }
 
 export interface ItineraryDayInput {
@@ -149,6 +169,10 @@ export interface VacationPerson {
   relationship: 'family' | 'friends' | 'work' | 'other';
   relationshipTypeName?: string | null;
   created_at: string;
+}
+
+export interface ItineraryDayWithActivities extends ItineraryDay {
+  day_activities: DayActivity[];
 }
 
 export interface VacationWithDetails {
