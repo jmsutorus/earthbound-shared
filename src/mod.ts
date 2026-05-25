@@ -29,6 +29,7 @@ export * from "./subscriptions.ts";
 export * from "./task-templates.ts";
 export * from "./tasks.ts";
 export * from "./types.ts";
+export * from "./tiers.ts";
 export * from "./user.ts";
 export * from "./vacations.ts";
 export * from "./workouts.ts";

@@ -38,6 +38,7 @@ export const CATEGORY_DISPLAY_NAMES: Record<IngredientCategory, string> = {
 export interface Meal {
     id: number;
     userId: string;
+    slug: string | null;
     name: string;
     description: string | null;
     steps: string[];
@@ -52,6 +53,8 @@ export interface Meal {
     leftover_idea: string | null;
     flavor_profile: string | null;
     nutrition_insight: string | null;
+    published: number;
+    featured: number;
     created_at: string;
     updated_at: string;
 }
@@ -82,6 +85,8 @@ export interface MealInput {
     leftover_idea?: string;
     flavor_profile?: string;
     nutrition_insight?: string;
+    published?: boolean;
+    featured?: boolean;
 }
 
 export interface IngredientInput {
