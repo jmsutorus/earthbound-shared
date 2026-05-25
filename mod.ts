@@ -28,5 +28,5 @@ export * from "./src/task-templates.ts";
 export * from "./src/tasks.ts";
 export * from "./src/vacations.ts";
 export * from "./src/workouts.ts";
+export * from "./src/tiers.ts";
 export * from "./src/user.ts";
-
