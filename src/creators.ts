@@ -6,7 +6,7 @@ export interface CreationContent {
   /** Free-text category — no enum constraint */
   type: string | null;
   description: string | null;
-  /** Markdown long-form notes / retrospective */
+  /** @deprecated Use story sections instead */
   notes: string | null;
   rating: number | null; // 0–10
   status: "in-progress" | "completed" | "idea" | "abandoned" | null;
@@ -31,7 +31,6 @@ export interface CreationInput {
   title: string;
   type?: string | null;
   description?: string | null;
-  notes?: string | null;
   rating?: number | null;
   status?: "in-progress" | "completed" | "idea" | "abandoned";
   featured_photo?: string | null;
@@ -41,6 +40,17 @@ export interface CreationInput {
   started_date?: string | null;
   completed_date?: string | null;
   url?: string | null;
+}
+
+export interface CreationStorySection {
+  id: number;
+  creationId: number;
+  title: string | null;
+  content: string | null;
+  image_url: string | null;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
 }
 
 export interface CreationPhoto {
