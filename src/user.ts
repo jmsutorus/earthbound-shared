@@ -28,6 +28,7 @@ export interface User {
   showProfile: boolean;
   haptic: boolean;
   public_slug: string | null;
+  bio: string | null;
   birthday: string | null;
   age: number | null;
   height: number | null;
@@ -51,6 +52,7 @@ export interface UserRow {
   showProfile: number;
   haptic: number;
   public_slug: string | null;
+  bio: string | null;
   birthday: string | null;
   age: number | null;
   height: number | null;
