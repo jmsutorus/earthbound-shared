@@ -11,6 +11,7 @@ import type { MoodEntry } from "./mood.ts";
 import type { DailyMeal } from "./meals.ts";
 import type { Vacation, ItineraryDay, Booking } from "./vacations.ts";
 import type { RestaurantVisit } from "./restaurants.ts";
+import type { CreationContent } from "./creators.ts";
 
 export interface CalendarColor {
   id?: number;
@@ -128,6 +129,8 @@ export interface CalendarDayData {
   restaurantVisits: CalendarRestaurantVisit[];
   // Drink logs for this day
   drinkLogs: CalendarDrinkLog[];
+  // Creator works published/started on this day
+  creations: CreationContent[];
 }
 
 

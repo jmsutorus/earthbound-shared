@@ -20,6 +20,8 @@ export interface TierLimits {
   habits: number;         // max active habits (-1 = unlimited)
   tasks: number;          // max active tasks (-1 = unlimited)
   goals: number;          // max goals (-1 = unlimited)
+  workout_activities: number;
+  workout_goals: number;
 }
 
 export const TIER_LIMITS: Record<UserTier, TierLimits> = {
@@ -38,6 +40,8 @@ export const TIER_LIMITS: Record<UserTier, TierLimits> = {
     habits: 10,
     tasks:  50,
     goals:  10,
+    workout_activities: 20,
+    workout_goals: 5,
   },
   plus: {
     totalPhotos: 500,
@@ -54,6 +58,8 @@ export const TIER_LIMITS: Record<UserTier, TierLimits> = {
     habits: 30,
     tasks:  250,
     goals:  30,
+    workout_activities: 100,
+    workout_goals: 20,
   },
   pro: {
     totalPhotos: 5000,
@@ -70,6 +76,8 @@ export const TIER_LIMITS: Record<UserTier, TierLimits> = {
     habits: -1,
     tasks:  -1,
     goals:  -1,
+    workout_activities: -1,
+    workout_goals: -1,
   },
   admin: {
     totalPhotos: -1,
@@ -86,6 +94,8 @@ export const TIER_LIMITS: Record<UserTier, TierLimits> = {
     habits: -1,
     tasks:  -1,
     goals:  -1,
+    workout_activities: -1,
+    workout_goals: -1,
   },
 };
 

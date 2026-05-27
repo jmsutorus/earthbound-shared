@@ -31,6 +31,7 @@ export interface CreationInput {
   title: string;
   type?: string | null;
   description?: string | null;
+  notes?: string | null;
   rating?: number | null;
   status?: "in-progress" | "completed" | "idea" | "abandoned";
   featured_photo?: string | null;

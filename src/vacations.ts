@@ -1,6 +1,6 @@
 export type VacationStatus = 'planning' | 'booked' | 'in-progress' | 'completed' | 'cancelled';
-export type VacationType = 'beach' | 'ski' | 'cruise' | 'road-trip' | 'city' | 'camping' | 'adventure' | 'cultural' | 'theme-park' | 'festival' | 'business' | 'staycation' | 'other';
-export type BookingType = 'flight' | 'hotel' | 'activity' | 'car' | 'train' | 'other';
+export type VacationType = 'beach' | 'ski' | 'cruise' | 'road-trip' | 'city' | 'camping' | 'adventure' | 'cultural' | 'theme-park' | 'festival' | 'business' | 'staycation' | 'other' | 'relaxing' | 'city-break';
+export type BookingType = 'flight' | 'hotel' | 'activity' | 'car' | 'train' | 'other' | 'car-rental' | 'restaurant';
 export type BookingStatus = 'pending' | 'confirmed' | 'cancelled';
 
 export const VACATION_STATUSES: VacationStatus[] = ['planning', 'booked', 'in-progress', 'completed', 'cancelled'];

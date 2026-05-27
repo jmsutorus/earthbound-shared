@@ -10,6 +10,7 @@ export * from "./src/github.ts";
 export * from "./src/goals.ts";
 export * from "./src/habits.ts";
 export * from "./src/holidays.ts";
+export * from "./src/home.ts";
 export * from "./src/journals.ts";
 export * from "./src/locations.ts";
 export * from "./src/meals.ts";
