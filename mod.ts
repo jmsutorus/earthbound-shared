@@ -6,7 +6,6 @@ export * from "./src/debts.ts";
 export * from "./src/drinks.ts";
 export * from "./src/duolingo.ts";
 export * from "./src/events.ts";
-export * from "./src/github.ts";
 export * from "./src/goals.ts";
 export * from "./src/habits.ts";
 export * from "./src/holidays.ts";

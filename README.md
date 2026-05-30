@@ -11,7 +11,6 @@ Shared types and utilities for the Earthbound project (Homepage and API).
 - `drinks`: Drink and log types
 - `duolingo`: Lesson completion types
 - `events`: Event, notification, and timeline types
-- `github`: GitHub event and sync status types
 - `goals`: Goal and milestone types
 - `habits`: Habit and completion types
 - `holidays`: Holiday types

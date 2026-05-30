@@ -32,13 +32,33 @@ export interface JournalContent {
   updated_at: string;
 }
 
+export type JournalLinkType =
+  | "media"
+  | "park"
+  | "journal"
+  | "activity"
+  | "person"
+  | "event"
+  | "habit"
+  | "task"
+  | "vacation"
+  | "goal"
+  | "creator"
+  | "restaurant";
+
 export interface JournalLink {
   id: number;
   journal_id: number;
-  linked_type: "media" | "park" | "journal" | "activity";
+  linked_type: JournalLinkType;
   linked_id: number;
   linked_slug: string | null;
   created_at: string;
+}
+
+export interface InlineLink {
+  type: string;
+  slug: string;
+  label: string;
 }
 
 export interface DBJournalLink {

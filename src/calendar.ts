@@ -5,7 +5,6 @@ import type { EventWithCoverPhoto } from "./events.ts";
 import type { ParkContent } from "./parks.ts";
 import type { JournalContent } from "./journals.ts";
 import type { WorkoutActivity } from "./workouts.ts";
-import type { GithubEvent } from "./github.ts";
 import type { HabitCompletion } from "./habits.ts";
 import type { MoodEntry } from "./mood.ts";
 import type { DailyMeal } from "./meals.ts";
@@ -107,7 +106,6 @@ export interface CalendarDayData {
   parks: ParkContent[];
   journals: JournalContent[];
   workoutActivities: WorkoutActivity[];
-  githubEvents: GithubEvent[];
   habitCompletions: HabitCompletion[];
   duolingoCompleted: boolean;
   // Goals: goals with target_date on this day OR completed on this day
@@ -173,7 +171,6 @@ export interface CalendarDaySummary {
     firstCompletedName: string | null;
     firstCompletedDistance: number | null;
   };
-  githubEventCount: number;
   duolingoCompleted: boolean;
   habitCount: number;
   // Goal counts
