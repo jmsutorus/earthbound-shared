@@ -31,6 +31,7 @@ export interface WorkoutActivity {
   created_at: string;
   updated_at: string;
   pace?: number | null;
+  ai_recommendation?: string | null;
 }
 
 export interface CreateWorkoutActivity {
