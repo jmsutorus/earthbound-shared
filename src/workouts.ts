@@ -20,7 +20,7 @@ export interface WorkoutActivity {
   length: number; // Total duration in minutes
   distance?: number | null; // Distance in miles
   difficulty: "easy" | "moderate" | "hard" | "very hard";
-  type: "run" | "cardio" | "strength" | "flexibility" | "sports" | "mixed" | "other" | "swim" | "yoga" | "pilates";
+  type: "run" | "cardio" | "strength" | "flexibility" | "sports" | "mixed" | "other" | "swim" | "yoga" | "pilates" | "swimming" | "cycling";
   exercises: Exercise[];
   notes?: string | null;
   completed: boolean;
@@ -40,7 +40,7 @@ export interface CreateWorkoutActivity {
   length: number;
   distance?: number;
   difficulty: "easy" | "moderate" | "hard" | "very hard";
-  type: "run" | "cardio" | "strength" | "flexibility" | "sports" | "mixed" | "other";
+  type: "run" | "cardio" | "strength" | "flexibility" | "sports" | "mixed" | "other" | "swimming" | "cycling";
   exercises: Exercise[];
   notes?: string;
   completed?: boolean;
