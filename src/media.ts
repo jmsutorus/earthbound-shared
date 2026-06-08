@@ -15,8 +15,8 @@ export interface MediaContent {
   description: string | null;
   length: string | null;
   creator: string | null; // JSON array
-  featured: number; // 0 or 1
-  published: number; // 0 or 1
+  featured: boolean;
+  published: boolean;
   time_spent: number;
   content?: string;
   progress: number;

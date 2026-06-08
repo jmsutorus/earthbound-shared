@@ -61,3 +61,25 @@ export interface RelationshipStats {
   dateFrequency: { month: string; count: number }[];
   intimacyFrequency: { month: string; count: number }[];
 }
+
+export interface RelationshipProfile {
+  id: number;
+  userId: string;
+  partner_id: number | null;
+  start_date: string | null; // YYYY-MM-DD
+  health_rating: number | null; // 1-5
+  love_languages: string[];
+  goals: string[];
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface UpsertRelationshipProfileInput {
+  partner_id?: number | null;
+  start_date?: string | null;
+  health_rating?: number | null;
+  love_languages?: string[];
+  goals?: string[];
+  notes?: string | null;
+}
