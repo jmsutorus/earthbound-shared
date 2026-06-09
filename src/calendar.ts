@@ -62,7 +62,7 @@ export interface CalendarMilestone {
 // Relationship-related calendar types
 export interface CalendarRelationshipItem {
   id: number;
-  type: 'date' | 'intimacy' | 'milestone';
+  type: 'date' | 'intimacy' | 'milestone' | 'start' | 'end' | 'checkin';
   date: string;
   title?: string;
   description?: string;
@@ -189,6 +189,8 @@ export interface CalendarDaySummary {
   };
   // Relationship count
   relationshipCount: number;
+  hasEndedRelationship: boolean;
+  hasStartedRelationship: boolean;
   // Meal count (number of meal types logged for the day)
   mealCount: number;
   // Vacation counts

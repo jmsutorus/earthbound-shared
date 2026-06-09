@@ -1,6 +1,17 @@
+export interface Relationship {
+  id: number;
+  userId: string;
+  partner_id: number | null;
+  partner_name: string | null;
+  started_at: string; // YYYY-MM-DD
+  ended_at: string | null; // YYYY-MM-DD
+  created_at: string;
+}
+
 export interface RelationshipDate {
   id: number;
   userId: string;
+  relationship_id: number | null;
   date: string; // YYYY-MM-DD
   time: string | null;
   type: string;
@@ -17,6 +28,7 @@ export interface RelationshipDate {
 export interface IntimacyEntry {
   id: number;
   userId: string;
+  relationship_id: number | null;
   date: string; // YYYY-MM-DD
   time: string | null;
   duration: number | null;
@@ -35,6 +47,7 @@ export interface IntimacyEntry {
 export interface RelationshipMilestone {
   id: number;
   userId: string;
+  relationship_id: number | null;
   title: string;
   date: string; // YYYY-MM-DD
   category: string;
@@ -66,6 +79,7 @@ export interface RelationshipProfile {
   id: number;
   userId: string;
   partner_id: number | null;
+  active_relationship_id: number | null;
   start_date: string | null; // YYYY-MM-DD
   health_rating: number | null; // 1-5
   love_languages: string[];
@@ -82,4 +96,48 @@ export interface UpsertRelationshipProfileInput {
   love_languages?: string[];
   goals?: string[];
   notes?: string | null;
+}
+
+export interface RelationshipHealthLog {
+  id: number;
+  userId: string;
+  relationship_id: number | null;
+  date: string; // YYYY-MM-DD — the day this check-in represents
+  rating: number; // 1-5
+  notes: string | null;
+  created_at: string;
+}
+
+export interface RelationshipStatusLog {
+  id: number;
+  userId: string;
+  date: string; // YYYY-MM-DD
+  status: "started" | "ended";
+  partner_name: string | null; // name snapshot at time of event
+  partner_id: number | null;
+  notes: string | null;
+  created_at: string;
+}
+
+export interface RelationshipArchive {
+  relationship: Relationship;
+  dates: RelationshipDate[];
+  milestones: RelationshipMilestone[];
+  intimacyCount: number;
+  intimacyAvgRating: number | null;
+}
+
+export interface ConnectionCheckin {
+  id: number;
+  userId: string;
+  relationship_id: number | null;
+  date: string; // YYYY-MM-DD
+  communication_rating: number; // 1-5
+  intimacy_rating: number; // 1-5
+  support_rating: number; // 1-5
+  time_rating: number; // 1-5
+  prompt_question: string | null;
+  prompt_answer: string | null;
+  notes: string | null;
+  created_at: string;
 }
