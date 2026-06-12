@@ -32,6 +32,8 @@ export interface WorkoutActivity {
   updated_at: string;
   pace?: number | null;
   ai_recommendation?: string | null;
+  source?: string | null; // 'manual' | 'strava' | 'garmin' | ...
+  external_id?: string | null; // id of the workout in the source system, for dedupe
 }
 
 export interface CreateWorkoutActivity {
@@ -47,6 +49,8 @@ export interface CreateWorkoutActivity {
   completed_at?: string | null;
   featured?: boolean;
   published?: boolean;
+  source?: string; // 'manual' | 'strava' | 'garmin' | ...
+  external_id?: string; // id of the workout in the source system, for dedupe
 }
 
 export interface WorkoutActivityStats {
