@@ -16,6 +16,7 @@ export interface TierLimits {
   creators: PerFeatureLimits;
   restaurants: PerFeatureLimits;
   drinks: PerFeatureLimits;
+  cities: PerFeatureLimits;
   relationshipDates: PerFeatureLimits;
   habits: number;         // max active habits (-1 = unlimited)
   tasks: number;          // max active tasks (-1 = unlimited)
@@ -36,6 +37,7 @@ export const TIER_LIMITS: Record<UserTier, TierLimits> = {
     creators:         { entries: 5,   photosPerEntry: 3  },
     restaurants:      { entries: 20,  photosPerEntry: 1  },
     drinks:           { entries: 20,  photosPerEntry: 1  },
+    cities:           { entries: 15,  photosPerEntry: 1  },
     relationshipDates:{ entries: 15,  photosPerEntry: 1  },
     habits: 10,
     tasks:  50,
@@ -54,6 +56,7 @@ export const TIER_LIMITS: Record<UserTier, TierLimits> = {
     creators:         { entries: 25,  photosPerEntry: 10 },
     restaurants:      { entries: 100, photosPerEntry: 1  },
     drinks:           { entries: 100, photosPerEntry: 1  },
+    cities:           { entries: 75,  photosPerEntry: 1  },
     relationshipDates:{ entries: 100, photosPerEntry: 3  },
     habits: 30,
     tasks:  250,
@@ -72,6 +75,7 @@ export const TIER_LIMITS: Record<UserTier, TierLimits> = {
     creators:         { entries: -1, photosPerEntry: -1  },
     restaurants:      { entries: -1, photosPerEntry: 3   },
     drinks:           { entries: -1, photosPerEntry: 3   },
+    cities:           { entries: -1, photosPerEntry: 3   },
     relationshipDates:{ entries: -1, photosPerEntry: 10  },
     habits: -1,
     tasks:  -1,
@@ -90,6 +94,7 @@ export const TIER_LIMITS: Record<UserTier, TierLimits> = {
     creators:         { entries: -1, photosPerEntry: -1 },
     restaurants:      { entries: -1, photosPerEntry: -1 },
     drinks:           { entries: -1, photosPerEntry: -1 },
+    cities:           { entries: -1, photosPerEntry: -1 },
     relationshipDates:{ entries: -1, photosPerEntry: -1 },
     habits: -1,
     tasks:  -1,

@@ -2,6 +2,7 @@ export * from "./budget.ts";
 export * from "./cache.ts";
 export * from "./calendar.ts";
 export * from "./chat.ts";
+export * from "./cities.ts";
 export * from "./creators.ts";
 export * from "./debts.ts";
 export * from "./drinks.ts";

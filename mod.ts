@@ -2,6 +2,7 @@ export * from "./src/creators.ts";
 export * from "./src/budget.ts";
 export * from "./src/cache.ts";
 export * from "./src/calendar.ts";
+export * from "./src/cities.ts";
 export * from "./src/debts.ts";
 export * from "./src/drinks.ts";
 export * from "./src/duolingo.ts";

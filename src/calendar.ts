@@ -11,6 +11,7 @@ import type { DailyMeal } from "./meals.ts";
 import type { Vacation, ItineraryDay, Booking } from "./vacations.ts";
 import type { RestaurantVisit } from "./restaurants.ts";
 import type { CreationContent } from "./creators.ts";
+import type { CityVisit } from "./cities.ts";
 
 export interface CalendarColor {
   id?: number;
@@ -97,6 +98,17 @@ export interface CalendarRestaurantVisit extends RestaurantVisit {
   poster: string | null;
 }
 
+// City visit for calendar display
+export interface CalendarCityVisit extends CityVisit {
+  cityName: string;
+  citySlug: string;
+  country: string | null;
+  latitude: number | null;
+  longitude: number | null;
+  isStartDate: boolean;
+  isEndDate: boolean;
+}
+
 export interface CalendarDayData {
   date: string; // YYYY-MM-DD format
   mood: MoodEntry | null;
@@ -129,6 +141,8 @@ export interface CalendarDayData {
   drinkLogs: CalendarDrinkLog[];
   // Creator works published/started on this day
   creations: CreationContent[];
+  // City visits spanning this day
+  cityVisits: CalendarCityVisit[];
 }
 
 
@@ -216,4 +230,7 @@ export interface CalendarDaySummary {
   drinkCount: number;
   drinkFirstName: string | null;
   drinkFirstProducer: string | null;
+  // City visit count
+  cityCount: number;
+  cityFirstName: string | null;
 }
