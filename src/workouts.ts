@@ -34,6 +34,13 @@ export interface WorkoutActivity {
   ai_recommendation?: string | null;
   source?: string | null; // 'manual' | 'strava' | 'garmin' | ...
   external_id?: string | null; // id of the workout in the source system, for dedupe
+  // Activity-level metrics (parsed from imports or entered manually)
+  avg_heart_rate?: number | null;
+  max_heart_rate?: number | null;
+  calories?: number | null;
+  elevation_gain?: number | null; // feet
+  rpe?: number | null; // Rate of Perceived Exertion, 1-10
+  training_load?: number | null; // computed effort score (TRIMP / duration×RPE)
 }
 
 export interface CreateWorkoutActivity {
@@ -51,6 +58,13 @@ export interface CreateWorkoutActivity {
   published?: boolean;
   source?: string; // 'manual' | 'strava' | 'garmin' | ...
   external_id?: string; // id of the workout in the source system, for dedupe
+  // Activity-level metrics (parsed from imports or entered manually)
+  avg_heart_rate?: number | null;
+  max_heart_rate?: number | null;
+  calories?: number | null;
+  elevation_gain?: number | null; // feet
+  rpe?: number | null; // Rate of Perceived Exertion, 1-10
+  training_load?: number | null;
 }
 
 export interface WorkoutActivityStats {
