@@ -105,6 +105,7 @@ export interface CalendarCityVisit extends CityVisit {
   country: string | null;
   latitude: number | null;
   longitude: number | null;
+  image_url: string | null;
   isStartDate: boolean;
   isEndDate: boolean;
 }
