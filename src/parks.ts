@@ -63,6 +63,29 @@ export interface ParkPerson {
   created_at: string;
 }
 
+/**
+ * A single trip to a park. A park can be visited on several distinct trips,
+ * and each trip can span multiple days (start_date .. end_date inclusive).
+ */
+export interface ParkVisit {
+  id: number;
+  parkId: number;
+  userId: string;
+  start_date: string; // YYYY-MM-DD
+  end_date: string;   // YYYY-MM-DD (equal to start_date for a single-day trip)
+  title: string | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ParkVisitInput {
+  start_date: string;
+  end_date: string;
+  title?: string | null;
+  notes?: string | null;
+}
+
 export interface ParkPhoto {
   id: number;
   parkId: number;

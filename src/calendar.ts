@@ -98,6 +98,21 @@ export interface CalendarRestaurantVisit extends RestaurantVisit {
   poster: string | null;
 }
 
+// Park visit for calendar display. Extends ParkContent so all existing park
+// field access keeps working; adds the trip/day context for the day it lands on.
+export interface CalendarPark extends ParkContent {
+  // The trip this day belongs to (absent for legacy parks with only `visited`).
+  visitId: number | null;
+  visitTitle: string | null;
+  // 1-based day within the trip and the trip's total length.
+  dayNumber: number | null;
+  totalDays: number | null;
+  isStartDate: boolean;
+  isEndDate: boolean;
+  // Photo whose date_taken matches this day, if any (the "picture for this day").
+  dayPhoto: string | null;
+}
+
 // City visit for calendar display
 export interface CalendarCityVisit extends CityVisit {
   cityName: string;
@@ -116,7 +131,7 @@ export interface CalendarDayData {
   media: MediaContent[];
   tasks: Task[];
   events: EventWithCoverPhoto[];
-  parks: ParkContent[];
+  parks: CalendarPark[];
   journals: JournalContent[];
   workoutActivities: WorkoutActivity[];
   habitCompletions: HabitCompletion[];
