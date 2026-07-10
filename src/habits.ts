@@ -9,6 +9,8 @@ export interface Habit {
   active: boolean;
   completed: boolean;
   order_index: number;
+  /** Local reminder time "HH:MM" (24h); null = no reminder. */
+  reminder_time?: string | null;
   created_at: string;
   updated_at: string;
 }
