@@ -28,6 +28,11 @@ export interface Vacation {
   featured: boolean;
   published: boolean;
   content: string | null;
+  latitude: number | null;
+  longitude: number | null;
+  destination_region: string | null;
+  destination_country: string | null;
+  destination_country_code: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -50,6 +55,12 @@ export interface VacationInput {
   featured?: boolean;
   published?: boolean;
   content?: string;
+  /** Geocoded destination (null clears the pin) */
+  latitude?: number | null;
+  longitude?: number | null;
+  destination_region?: string | null;
+  destination_country?: string | null;
+  destination_country_code?: string | null;
 }
 
 export interface DayActivity {
